@@ -1,0 +1,193 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "";
+}
+
+<header>
+
+</header>
+
+<body>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h1>Iniciativa Saúde da Cidade</h1>
+            <p>
+                <strong>Texto sobre vida saudável:</strong> Lorem ipsum dolor sit amet et delectus accommodare his
+                consul copiosae
+                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                hendrerit.
+            </p>
+            <p>
+                <strong>Texto sobre vida iniciativa:</strong> Lorem ipsum dolor sit amet et delectus accommodare his
+                consul copiosae
+                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                hendrerit.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <div class="imagem">
+                <img src="~/imagens/pessoas.jpg" width="600px">
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div id="frm">
+                <h2>Entre em contato!</h2>
+                <p>Nos mande uma mensagem e fique por dentro de nossos eventos.</p>
+
+                <div class="form">
+                    <form method="POST" id="frmCadastro">
+                        <div>
+                            <label asp-for="Nome">Nome:</label>
+                            <input asp-for="Nome" id="nome"/>
+                        </div>
+                        <div>
+                            <label asp-for="Email">Email:</label>
+                            <input asp-for="Email" id="email"/>
+                        </div>
+                        <div>
+                            <label asp-for="Mensagem">Mensagem (opcional):</label>
+                            <textarea asp-for="Mensagem" id="mensagem"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Enviar" id="BtnSubmit"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card" style="width: 130px">
+                <img src="~/imagens/agenda.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <a href="#" data-toggle="modal" data-target="#Agenda" class="text-center">Agenda de Eventos</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card" style="width: 150px">
+                <img src="~/imagens/dicas.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <a href="#" data-toggle="modal" data-target="#Dicas" class="text-center">Dicas de Vida Saudável</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card" style="width: 150px">
+                <img src="~/imagens/empresas.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <a href="#" data-toggle="modal" data-target="#Apoiadores" class="text-center">Apoiadores</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="Agenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agenda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>10/10/10 10:10 - Evento 1</p>
+
+                    <p>Loren ipsum dolor sit amet et delectus accommodare his consul copiosae.</p>
+
+                    <p>10/10/10 10:10 - Evento 2</p>
+
+                    <p>Loren ipsum dolor sit amet et delectus accommodare his consul copiosae.</p>
+
+                    <p>10/10/10 10:10 - Evento 3</p>
+
+                    <p>Loren ipsum dolor sit amet et delectus accommodare his consul copiosae.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Dicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dicas de Vida Saudável</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Loren ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos.</p>
+
+                    <p>Loren ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos.</p>
+
+                    <p>Loren ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Apoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Apoiadores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">                
+                            <img src="~/imagens/academia.png" width="90px">
+                            <h6>Ritmos Academia</h6>
+                            <p>Descrição</p>
+
+                            <img src="~/imagens/fazenda.png" width="90px">
+                            <h6>Fazenda Machado</h6>
+                            <p>Descrição</p>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col">
+                            <img src="~/imagens/mercado.png" width="90px">
+                            <h6>Mercado Compre Bem</h6>
+                            <p>Descrição</p>
+
+                            <img src="~/imagens/restaurante.png" width="90px">
+                            <h6>Magnifique Restaurante</h6>
+                            <p>Descrição</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+</body>
