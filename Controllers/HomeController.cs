@@ -20,6 +20,8 @@ namespace Hotsite.Controllers
 
         public IActionResult Index()
         {
+            int i;
+
             _logger.LogInformation("Isso é um alerta. Controller/Index");
             return View();
         }
